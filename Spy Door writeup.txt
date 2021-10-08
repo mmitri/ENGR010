@@ -1,0 +1,23 @@
+Mark Mitri
+ENGR 010
+04/28/2020
+Spy Door Final Project
+Write Up
+
+The components I used for this project are two buttons for the 
+secret entrance and a button to close the door. I used an LED and
+a speaker to indicate the intruder/wrong code input. I used a servo
+to simulate a door and a potentiometer for my component 5. I used three methods,
+approach(), leave(), printInfo(), and powerOut(). Approach() handles the password input
+as well as wrong inputs and collects the data as to which person enterded. Leave()
+closes the door once a button is pressed and clears the screen. PrintInfo() prints
+the info related to component 4 after the number of entries is a factor of 10. powerOut()
+is my component 5, which is a random power outage and requires the door to be physically closed
+via a potentiometer. The function chooses a random number and if it is 2 certain values,
+it prints out that there is a power outage and waits until the potentiometer is above 512 to then
+close the door and continue as normal. The most challenging part of this project
+was the complexity of the events happening in sequence, however, having global variables that
+change when a specific event happened made it a much smoother process. The most exciting part
+was when my project all came together. Thanks for a great ENGR 010 class and for the effort
+and determination put into this course after the disease outbreak. I know it was hard for all of us
+and I appreciate it.

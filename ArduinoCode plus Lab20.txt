@@ -1,0 +1,49 @@
+int button1 = 13;
+int button2 = 8;
+int button3 = 4;
+int button4 = 2;
+int xCor = 0;
+int yCor = 0;
+
+int buttonState1 = 0;
+int buttonState2 = 0;
+int buttonState3 = 0;
+int buttonState4 = 0;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(button1, INPUT);  
+  pinMode(button2, INPUT);
+  pinMode(button3, INPUT);
+  pinMode(button4, INPUT);
+}
+
+void loop()
+{ 
+  
+  buttonState1 = digitalRead(button1);
+  buttonState2 = digitalRead(button2);
+  buttonState3 = digitalRead(button3);
+  buttonState4 = digitalRead(button4);
+  
+  if(buttonState1 == HIGH){
+    xCor = +1; 
+  }
+  if(buttonState2 == HIGH){
+  	xCor = -1;
+  }
+  if(buttonState3 == HIGH){
+    yCor = +1;
+  }
+  if(buttonState4 == HIGH){
+    yCor = -1;
+  }
+  delay(100);   
+  Serial.print("X: ");
+  Serial.println(xCor);
+  delay(1000);
+  Serial.print("Y: ");
+  Serial.println(yCor);
+  delay(1000);
+}
